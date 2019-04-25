@@ -1,16 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>後台監控系統</title>
     <link rel="stylesheet" href="./scss/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
-<body>
-    
 
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">Go-Shopping</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMarkup"
+                    aria-controls="navbarMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse ml-5" id="navbarMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-item nav-link active mr-3" href="#">首頁 <span class="sr-only">(current)</span></a>
+                        <a class="nav-item nav-link mr-3" href="#">訂單</a>
+                        <a class="nav-item nav-link " href="#">商品</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="section py-4 bg-light">
+        <div class="container">
+            <h3 class="mb-4 text-center">總覽</h3>
+            <div class="form-row">
+                <div class="col-lg text-center bg-white mx-2 py-4">
+                    <i class="fas fa-hand-holding-usd fa-2x mr-2" style="vertical-align:super;"></i>
+                    <h4 class="d-inline-block mb-3">總收入</h4>
+                    <h3 class="text-primary">11,111</h3>
+                </div>
+                <div class="col-lg text-center bg-white mx-2 py-4">
+                    <i class="fas fa-donate fa-2x mr-2" style="vertical-align:text-bottom;"></i>
+                    <h4 class="d-inline-block mb-3">總支出</h4>
+                    <h3 class="text-danger">11,111</h3>
+                </div>
+                <div class="col-lg text-center bg-white mx-2 py-4">
+                    <i class="fas fa-money-bill-alt fa-2x mr-2" style="vertical-align:text-center;"></i>
+                    <h4 class="d-inline-block mb-3">總毛利</h4>
+                    <h3 class="text-success">11,111</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section mb-5">
+        <div class="container">
+            <canvas id="canvas"></canvas>
+        </div>
+    </section>
+    <section class="section bg-light py-4">
+        <div class="container">
+            <div class="row text-left">
+                <div class="col-lg-6 bg-white px-4">
+                    <h3 class="py-3">購買網站追蹤</h3>
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <th scope="row"><i class="fab fa-facebook-square fa-2x"></i></th>
+                                <td class="text-muted">Facebook.com</td>
+                                <td class="text-right">45,836</td>
+                                <td class="text-right">30%</td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><i class="fab fa-google fa-2x"></i></th>
+                                <td class="text-muted">Google.com</td>
+                                <td class="text-right">23,582</td>
+                                <td class="text-right">22%</td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><i class="fab fa-product-hunt fa-2x"></i></th>
+                                <td class="text-muted">Pchome.com</td>
+                                <td class="text-right">2,489</td>
+                                <td class="text-right">18%</td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><i class="fab fa-speakap fa-2x"></i></th>
+                                <td class="text-muted">Shopee.com</td>
+                                <td class="text-right">1,057</td>
+                                <td class="text-right">17%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-lg-6 bg-white px-4">
+                    <h3 class="py-3">最新訂單</h3>
+                    <div class="row">
+                        <div class="col-lg-3 mb-3">
+                            <img src="https://images.unsplash.com/photo-1489345745021-740d36bbda21?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1651&q=80" alt="" class="img-fluid">
+                        </div>
+                        <div class="col-lg-7 text-left mb-3">
+                            <div class="h5">很素白襯衫</div>
+                            <div>2019/4/13  13:42</div>
+                            <div>王大明</div>
+                        </div>
+                        <div class="col-lg-2 text-right mb-3 d-inline-block">
+                            <p>總金額</p>
+                            <h5>480</h5>
+                        </div>
+                        <div class="col-lg-3 mb-3">
+                            <img src="https://images.unsplash.com/photo-1523381294911-8d3cead13475?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80" alt="" class="img-fluid">
+                        </div>
+                        <div class="col-lg-7 text-left mb-3">
+                            <div class="h5">很素綠T</div>
+                            <div>2019/4/13  13:42</div>
+                            <div>王大明</div>
+                        </div>
+                        <div class="col-lg-2 text-right mb-3 d-inline-block">
+                            <p>總金額</p>
+                            <h5>480</h5>
+                        </div>
+                        <div class="col-lg-3 mb-3">
+                            <img src="https://images.unsplash.com/photo-1529635457390-aa69ba54d77d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80" alt="" class="img-fluid">
+                        </div>
+                        <div class="col-lg-7 text-left mb-3">
+                            <div class="h5">很染粉T</div>
+                            <div>2019/4/13  13:42</div>
+                            <div>王大明</div>
+                        </div>
+                        <div class="col-lg-2 text-right mb-3 ">
+                            <p>總金額</p>
+                            <h5>480</h5>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </section>
 
     <script src="./js/all.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 </body>
+
 </html>
