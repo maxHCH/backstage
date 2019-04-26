@@ -7,7 +7,7 @@ window.chartColors = {
     purple: 'rgb(153, 102, 255)',
     grey: '#6c757d'
 };
-var config = {
+const config = {
     type: 'line',
     data: {
         labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
@@ -57,6 +57,6 @@ var config = {
 };
 
 window.onload = function() {
-    var ctx = document.getElementById('canvas').getContext('2d');
+    let ctx = document.getElementById('canvas').getContext('2d');
     window.myLine = new Chart(ctx, config);
 };
