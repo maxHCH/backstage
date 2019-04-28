@@ -17,21 +17,21 @@ const config = {
             borderColor: window.chartColors.red,
             data: [2000, 3000, 3900, 3200, 1000, 2400, 2000],
             fill: false,
-            lineTension:0
+            lineTension:0.3
         }, {
             label: '總收入',
             fill: false,
             backgroundColor: window.chartColors.blue,
             borderColor: window.chartColors.blue,
             data: [7180, 4300, 5522, 7819, 4111, 6900, 6000],
-            lineTension:0
+            lineTension:0.3
         }, {
             label: '總毛利',
             fill: false,
             backgroundColor: window.chartColors.green,
             borderColor: window.chartColors.green,
             data: [5180, 1300, 1622, 3519, 3111, 3500, 4000],
-            lineTension:0
+            lineTension:0.3
         }]
     },
     options: {
